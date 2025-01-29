@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: black;
+  width: 100dvw;
+  overflow-x: hidden;
+  height: 100%;
+  background: #fff;
+  border-color: #3b3b3b;
+  user-select: none;
+}
+
+.screen-max-width {
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  position: relative;
+  max-width: 1120px;
+}
+
+@layer utilities {
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+  .nav-height {
+    @apply h-[100px] bg-green-700 text-white flex items-center px-10;
+  }
+  .common-padding {
+    @apply sm:py-32 py-20 sm:px-10 px-5;
+  }
+
+  /* authform */
+  .authform-height {
+    @apply h-[100vh];
+
+    background: linear-gradient(
+      to right,
+      #16c0e0,
+      #16c0e0,
+      #08697c,
+      #08697c,
+      #08697c,
+      #08697c
+    );
+  }
+  .authform-table {
+    @apply h-[700px] w-[1000px] bg-white rounded-3xl flex;
+    box-shadow: 10px 3px 15px 5px rgba(0, 0, 0, 0.3);
+  }
+  .authform-table-content {
+    @apply flex items-center justify-center h-full w-full;
+  }
+
+  .font-orbitron {
+    font-family: "Orbitron", serif;
+  }
+
+  .authform-table-image {
+    @apply h-full w-full;
+  }
+  .authform-input {
+    @apply border border-black w-full px-5 py-2 rounded-lg;
+  }
+  .authform-btn {
+    @apply w-full px-5 py-3 rounded-lg text-white flex items-center justify-center cursor-pointer transition-all duration-300 text-sm;
+    background: linear-gradient(to right, #000, #2c2c2c, #585858, #787878);
+  }
+  .authform-btn:hover {
+    @apply transition-all duration-300;
+    background: linear-gradient(to right, #787878, #000, #2c2c2c, #585858);
+  }
+
+  /* allProject */
+  .allProjects-height {
+    @apply h-[calc(100vh-100px)] bg-gray-200;
+  }
+
+  /* app */
+  .app-container {
+    display: flex;
+  }
+  .content-container {
+    flex: 1;
+    padding: 20px;
+  }
+
+  /* sidebar */
+  .sidebar {
+    width: 200px;
+    background-color: #f4f4f4;
+    padding: 20px;
+  }
+}
